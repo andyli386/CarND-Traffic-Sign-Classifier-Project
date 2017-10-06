@@ -6,3 +6,5 @@ models
 *.p
 Traffic_Sign_Classifier-Copy1.ipynb
 traffic-signs-data
+.floydexpt
+.floydignore

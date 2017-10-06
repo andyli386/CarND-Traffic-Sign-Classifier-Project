@@ -22,11 +22,11 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./new_image/elephant_crossing_road.jpg "Traffic Sign 1"
-[image5]: ./new_image/iguana_crossing_road.jpg "Traffic Sign 2"
-[image6]: ./new_image/level_crossing.jpg "Traffic Sign 3"
-[image7]: ./new_image/speed_limit_40.jpg "Traffic Sign 4"
-[image8]: ./new_image/stop.jpg "Traffic Sign 5"
+[image4]: ./new_image1/No_Vehicles.png "Traffic Sign 1"
+[image5]: ./new_image1/Slippery_Road.png "Traffic Sign 2"
+[image6]: ./new_image1/Speed_Limit.png "Traffic Sign 3"
+[image7]: ./new_image1/Traffic_Signal_Ahead.png "Traffic Sign 4"
+[image8]: ./new_image1/Wild_Animals.png "Traffic Sign 5"
 [image_train]: ./examples/train.png "Train"
 [contrast]: ./examples/contrast.png "Contrast"
 [accuracy]: ./examples/accuracy.png "Accuracy"
@@ -146,29 +146,29 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Elephant crossing road| Stop                                          | 
-| Iguana crossing road  | No entry 										|
-| Level crossing        | Road work                                     |
-| Speed limit 40 km/h   | Priority road                                 |
-| Stop                  | Stop                                          |
+|No Vehicles| Vehicles over 3.5 metric tons prohibeted| 
+| Wild Animals | Wild animals crossing|
+| Traffic Signal Ahead| Traffic signals|
+| Speed limit | Keep right|
+| Slippery Road | Dangerous curve to the left|
 
 
-The model was able to correctly guess 1 of the 5 traffic signs, which gives an accuracy of 20%. This is because some lables of the new images are not included in the 43 labels.
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 20%. 
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the fourth image, the model is absolutely sure that this is a stop sign (probability of 1), and the image does contain a stop sign. The top five soft max probabilities were
+For the second image, the model is absolutely sure that this is a wild animals sign (probability of 1), and the image does contain a wild animals sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.         			| Stop sign   									| 
-| 0.     				| Turn left ahead                               |
-| 0.					| No passing                                    |
-| 0.	      			| Turn right ahead                              |
-| 0.				    | Vehicles over 3.5 metric tons prohibited      |
-
+| 1.         			| Wild animals crossing   									| 
+| 0.     				| Bumpy road |
+| 0.					| Road work|
+| 0.	      			| Bicycles crossing |
+| 0.				    | Road narrows on the right|
+I think these new images should be classified easily, because these images are very regular. I don'k know why the accuracy is so low.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
